@@ -3,7 +3,7 @@ import React from 'react';
 const LeftNavbar = () => {
     return (
         <div>
-            <h3>This is Left Navbar</h3>
+            <h3>All Courses</h3>
         </div>
     );
 };
