@@ -4,9 +4,8 @@ import ContentSummary from '../pages/ContentSummary/ContentSummary';
 
 const Category = () => {
     const categoryCourses=useLoaderData();
-
     return (
-        <div className='card-gird'>
+        <div className='card-layout'>
             {
                 categoryCourses.map(categoryCours=><ContentSummary
                 key={categoryCours._id}

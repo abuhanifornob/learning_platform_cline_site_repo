@@ -5,7 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 const ContentSummary = ({cours}) => {
-    const {_id,total_view,image_url,title,details}=cours;
+
+    const {total_view,image_url,title,details}=cours;
     return (
     
         <div>
