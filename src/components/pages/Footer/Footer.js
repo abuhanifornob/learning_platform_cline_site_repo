@@ -13,7 +13,7 @@ import {
 const Footer = () => {
     return (
     
-            <MDBFooter className='text-center' color='white' bgColor='dark'>
+            <MDBFooter className='text-center' color='white' bgColor='dark' >
               <MDBContainer className='p-4'>
                 <section className='mb-4'>
                   <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
@@ -65,9 +65,7 @@ const Footer = () => {
         
                 <section className='mb-4'>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat
-                    voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam
-                    sequi voluptate quas.
+                  Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
                   </p>
                 </section>
         
@@ -79,103 +77,103 @@ const Footer = () => {
                       <ul className='list-unstyled mb-0'>
                         <li>
                           <a href='#!' className='text-white'>
+                          Online Learning
+                          </a>
+                        </li>
+                        <li>
+                          <a href='#!' className='text-white'>
                           About Us
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 2
+                          Careers
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 3
-                          </a>
-                        </li>
-                        <li>
-                          <a href='#!' className='text-white'>
-                            Link 4
+                          Press Center
                           </a>
                         </li>
                       </ul>
                     </MDBCol>
         
                     <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                      <h5 className='text-uppercase'>Links</h5>
+                      <h5 className='text-uppercase'>Campus</h5>
         
                       <ul className='list-unstyled mb-0'>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 1
+                          Academic Solutions
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 2
+                          Free Trial
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 3
+                          Business Solutions
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 4
+                          Government Solutions
                           </a>
                         </li>
                       </ul>
                     </MDBCol>
         
                     <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                      <h5 className='text-uppercase'>Links</h5>
+                      <h5 className='text-uppercase'>Study</h5>
         
                       <ul className='list-unstyled mb-0'>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 1
+                          Admissions Policy
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 2
+                          Getting Started
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 3
+                          Online Application
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 4
+                          Visa Information
                           </a>
                         </li>
                       </ul>
                     </MDBCol>
         
                     <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                      <h5 className='text-uppercase'>Links</h5>
+                      <h5 className='text-uppercase'>Spport</h5>
         
                       <ul className='list-unstyled mb-0'>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 1
+                          Support
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 2
+                          Contact Us
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 3
+                          System Requirements
                           </a>
                         </li>
                         <li>
                           <a href='#!' className='text-white'>
-                            Link 4
+                          Site Feedback
                           </a>
                         </li>
                       </ul>
@@ -185,10 +183,8 @@ const Footer = () => {
               </MDBContainer>
         
               <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                © 2020 Copyright:
-                <a className='text-white' href='https://mdbootstrap.com/'>
-                  MDBootstrap.com
-                </a>
+                © Copyright ©2022 All rights reserved | This template is made with  by Abu Hanif
+              
               </div>
             </MDBFooter>
         

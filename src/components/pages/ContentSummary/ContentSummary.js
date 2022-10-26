@@ -3,14 +3,27 @@ import { Image } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { Link } from 'react-router-dom';
 
 const ContentSummary = ({cours}) => {
 
     const {total_view,image_url,title,details}=cours;
     return (
     
-        <div>
-            <img src={image_url}></img>
+        <div className='mx-5 mx-auto shadow-lg p-3 mb-5 bg-body rounded'>
+            
+            <img className='img-fluid w-100' src={image_url}></img>
+            <h3>{title}</h3>
+            <p>{
+                 details.length > 250 ?
+                 <>{details.slice(0, 250) + '...'} <Link to=''>Read More</Link> </>
+                 :
+                 details
+                //  {`/news/${_id}`}
+            }</p>
+
+
+
         </div>
 
    

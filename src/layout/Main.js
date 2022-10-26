@@ -9,9 +9,9 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <Container>
+            <Container className='my-5' >
                 <Row>
-                    <Col lg="4" className='d-none d-lg-block ' >
+                    <Col lg="4" className='d-none d-lg-block sticky-lg-top'>
                         <LeftNavbar></LeftNavbar>
                     </Col>
                     <Col lg="8">

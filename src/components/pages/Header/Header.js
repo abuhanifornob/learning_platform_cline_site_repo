@@ -22,18 +22,26 @@ const Header = () => {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="primary" className='navbar fw-bolder text-light'>
       <Container>
-        <Navbar.Brand href="#home"><Image src={logo} roundedCircle style={{ width: 40, height: 60, color: 'red' }}></Image> OnlineEdu</Navbar.Brand>
+        <Navbar.Brand href="#home"><Link to="/" className='text-decoration-none text-dark fs-4 pt-2'><Image src={logo} roundedCircle style={{ width: 40, height: 60, }}></Image> OnlineEdu</Link> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Home</Nav.Link>
-            <Nav.Link href="#pricing">About</Nav.Link>
+            <Nav.Link href="#home"><Link to="/home" className='text-decoration-none text-dark fs-5'>Home</Link></Nav.Link>
+            <Nav.Link href="#home"><Link to="/home" className='text-decoration-none text-dark fs-5'>About</Link></Nav.Link>
+            <Nav.Link href="#home"><Link to="/courses" className='text-decoration-none text-dark fs-5'>Courses</Link></Nav.Link>
+          
+            <Nav.Link href="#home"><Link to="/instractor" className='text-decoration-none text-dark fs-5'>Instrctor</Link></Nav.Link>
+          
+            <Nav.Link href="#home"><Link to="/blog" className='text-decoration-none text-dark fs-5'>Blog</Link></Nav.Link>
+          
+            <Nav.Link href="#home"><Link to="/contact" className='text-decoration-none text-dark fs-5'>Contact</Link></Nav.Link>
+{/*           
             <Nav.Link href="#pricing">Courses</Nav.Link>
             <Nav.Link href="#pricing">Instrctor</Nav.Link>
-            <Nav.Link href="#pricing">Block</Nav.Link>
-            <Nav.Link href="#pricing">Contact</Nav.Link>
+            <Nav.Link href="#pricing">Blog</Nav.Link>
+            <Nav.Link href="#pricing">Contact</Nav.Link> */}
 
           </Nav>
           <Nav>
