@@ -12,7 +12,7 @@ const LeftNavbar = () => {
        .then(data=>setCategory(data))
 
     },[])
-    console.log(category);
+  
     return (
         <div>
             <h3>All Courses</h3>
