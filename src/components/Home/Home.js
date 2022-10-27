@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className='mt-5'>
-            <h3 className='mb-4 text-center fs-1 fw-bolder shadow-lg p-3 mb-5 bg-body rounded '>Home Pages</h3>
+            <h3 className='mb-4 text-center fs-1 fw-bolder shadow-lg p-3 mb-5 bg-body rounded '>Online Education Platform</h3>
             <Carousel>
       <Carousel.Item>
         <img

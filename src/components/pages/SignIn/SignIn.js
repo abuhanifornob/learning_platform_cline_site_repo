@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ContextProvider, { AuthContext } from '../../../context/ContextProvider/ContextProvider';
 const provider =new GoogleAuthProvider();
 const gitHubProvider=new GithubAuthProvider();
@@ -79,6 +79,9 @@ const SignIn = () => {
     return (
         <>
         <Form onSubmit={handleSignIn} className='mt-5 bg-primary p-5 rounded shadow-lg p-3 mb-5 bg-body rounded'>
+            <Form.Text>
+                <h3>Welcome Back</h3>
+            </Form.Text>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" name='email' placeholder="Enter email" />
@@ -113,7 +116,9 @@ const SignIn = () => {
             <Form.Text className="text-danger">
                 {error}
             </Form.Text>
+            <p> Don’t have a account?<Link to="/signUp"> Register now</Link></p>
         </Form>
+         
          
             </>
 

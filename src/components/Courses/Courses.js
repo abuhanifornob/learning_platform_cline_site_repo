@@ -7,7 +7,7 @@ const Courses = () => {
     
     return (
         <div>
-            <h3>This is Main Course</h3>
+            <h3 className='mb-4 text-center fs-1 fw-bolder shadow-lg p-3 mb-5 bg-body rounded '>Online Educaton Platform</h3>
             {
                 coursesData.map(categoryCours=><ContentSummary
                 key={categoryCours._id}

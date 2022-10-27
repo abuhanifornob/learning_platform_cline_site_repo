@@ -84,8 +84,8 @@ const Header = () => {
 
             </Nav.Link>
             
-              { mode? <Button onClick={handleLight} variant="light" className='rounded-pill p-0 mt-3' style={{width:50, height:50}}>Dark</Button>:
-              <Button onClick={handleDark} variant="dark" className='rounded-pill p-0 mt-3' style={{width:50, height:50}}>Light</Button>
+              { mode? <Button onClick={handleLight} variant="light" className='rounded-pill p-0 mt-1' style={{width:50, height:50}}>Dark</Button>:
+              <Button onClick={handleDark} variant="dark" className='rounded-pill p-0 mt-1' style={{width:50, height:50}}>Light</Button>
               }
               
               

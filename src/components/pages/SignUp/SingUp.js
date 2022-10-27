@@ -65,8 +65,12 @@ const SingUp = () => {
 
 
     return (
-
+        <>
         <Form onSubmit={handleSignUp} className='mt-5 bg-primary p-5 rounded shadow-lg p-3 mb-5 bg-body rounded'>
+            <Form.Text>
+            <h3>Hello There,</h3>
+            <p>Register now to explore more</p>
+            </Form.Text>
             <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label className='fw-bolder'>Your Full Name</Form.Label>
                 <Form.Control type="text" name='name' placeholder="Enter Your Full Name" required />
@@ -101,8 +105,10 @@ const SingUp = () => {
             <Form.Text className="text-danger">
                 {error}
             </Form.Text>
-
+            <p> Already have a account?<Link to="/logIn">Log In</Link></p>
         </Form>
+        
+        </>
     );
 };
 
