@@ -31,17 +31,17 @@ import PrivetRoute from "./PrivetRoute";
             {
             path:"/courses",
             element:<Courses></Courses>,
-            loader:()=>fetch('http://localhost:5000/courses')
+            loader:()=>fetch('https://lerning-platform-server-side-nine.vercel.app/courses')
         },
         {
          path:"/cours/:id",
          element:<PrivetRoute><Cours></Cours></PrivetRoute>,
-         loader:({params})=>fetch(`http://localhost:5000/cours/${params.id}`)
+         loader:({params})=>fetch(`https://lerning-platform-server-side-nine.vercel.app/cours/${params.id}`)
         },
         {
             path:"/category/:id",
             element:<Category></Category>,
-            loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
+            loader:({params})=>fetch(`https://lerning-platform-server-side-nine.vercel.app/category/${params.id}`)
         },
         {
             path:"/login",

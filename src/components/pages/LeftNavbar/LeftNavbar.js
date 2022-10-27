@@ -5,13 +5,15 @@ import { json, Link } from 'react-router-dom';
 
 const LeftNavbar = () => {
     const [category,setCategory]=useState([])
+    console.log(category);
 
     useEffect(()=>{
-       fetch('http://localhost:5000/course-category')
+       fetch('https://lerning-platform-server-side-nine.vercel.app/course-category')
        .then(res=>res.json())
        .then(data=>setCategory(data))
 
     },[])
+    console.log(category);
   
     return (
         <div>
