@@ -11,6 +11,7 @@ import { FaRegUser, FaSign, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from "../../../asets/images/logo.png";
 import { AuthContext } from '../../../context/ContextProvider/ContextProvider';
+import LeftNavbar from '../LeftNavbar/LeftNavbar';
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -89,7 +90,10 @@ const Header = () => {
               }
               
               
-       
+              <Nav.Link className='d-lg-none'>
+                <LeftNavbar></LeftNavbar>
+              </Nav.Link>
+          
 
           </Nav>
         </Navbar.Collapse>
