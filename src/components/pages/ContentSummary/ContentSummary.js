@@ -3,9 +3,9 @@ import { Image } from 'react-bootstrap';
 import { FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const ContentSummary = ({ cours }) => {
+const ContentSummary = ({ co }) => {
 
-    const { total_view, image_url, title, details } = cours;
+    const { total_view, image_url, title, details,_id} = co;
     return (
 
         <div className='mx-5 mx-auto shadow-lg p-3 mb-5 bg-body rounded'>
@@ -16,7 +16,7 @@ const ContentSummary = ({ cours }) => {
             <h3>{title}</h3>
             <p>{
                 details.length > 250 ?
-                    <>{details.slice(0, 250) + '...'} <Link to=''>Read More for this Courses</Link> </>
+                    <>{details.slice(0, 250) + '...'} <Link to={`/cours/${_id}`}>Read More for this Courses Details</Link> </>
                     :
                     details
                 //  {`/news/${_id}`}

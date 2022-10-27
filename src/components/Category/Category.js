@@ -9,7 +9,7 @@ const Category = () => {
             {
                 categoryCourses.map(categoryCours=><ContentSummary
                 key={categoryCours._id}
-                cours={categoryCours}
+                co={categoryCours}
                 ></ContentSummary>)
             }
         </div>
