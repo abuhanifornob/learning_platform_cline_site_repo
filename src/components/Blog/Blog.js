@@ -6,7 +6,7 @@ const Blog = () => {
     
         <div className='m-4'>
             <div className="row">
-                <div className="col-4">
+                <div className=" col-12 col-lg-4">
                     <div id="list-example" className="list-group">
                         <a className="list-group-item list-group-item-action" href="#list-item-1">what is cors?</a>
                         <a className="list-group-item list-group-item-action" href="#list-item-2"> Why are you using firebase? What other options do you have to implement authentication?</a>
@@ -14,7 +14,7 @@ const Blog = () => {
                         <a className="list-group-item list-group-item-action" href="#list-item-4">What is Node? How does Node work?</a>
                     </div>
                 </div>
-                <div className="col-8">
+                <div className="col-12 col-lg-8">
                     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" className="scrollspy-example" tabindex="0">
                         <h4 id="list-item-1">What is CORS?</h4>
                         <p>

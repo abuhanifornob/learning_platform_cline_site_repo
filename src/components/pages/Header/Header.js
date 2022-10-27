@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="primary" className='navbar fw-bolder text-light'>
       <Container>
-        <Navbar.Brand href="#home"><Link to="/" className='text-decoration-none text-dark fs-4 pt-2'><Image src={logo} roundedCircle style={{ width: 40, height: 60, }}></Image> OnlineEdu</Link> </Navbar.Brand>
+        <Navbar.Brand href="#home"><Link to="/" className='text-decoration-none text-dark fs-4 pt-2'><Image src={logo} roundedCircle style={{ width: 40, height: 60, }}></Image>E-Learning</Link> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
