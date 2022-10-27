@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import { FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -22,12 +22,16 @@ const ContentSummary = ({ co }) => {
                 //  {`/news/${_id}`}
             }</p>
 
-            <div>
+            <div className='d-flex justify-content-between'>
                 <div>
                 <FaEye className='me-2'></FaEye>
                 <span>{total_view}</span>
                 </div>
                 
+                <div>
+                    <Button>Download PDF</Button>
+                </div>
+
             </div>
 
 

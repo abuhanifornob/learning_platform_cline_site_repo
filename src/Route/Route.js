@@ -6,6 +6,7 @@ import Cours from "../components/Courses/Cours";
 import Courses from "../components/Courses/Courses";
 import Home from "../components/Home/Home";
 import MainHome from "../components/Home/MainHome";
+import Instractor from "../components/Instractor/Instractor";
 import ContentSummary from "../components/pages/ContentSummary/ContentSummary";
 import FourOfFour from "../components/pages/Other/FourOfFour";
 import TermsAndConditon from "../components/pages/Other/TermsAndConditon";
@@ -70,6 +71,11 @@ import PrivetRoute from "./PrivetRoute";
         {
             path:"/blog",
             element:<Blog></Blog>
+
+        },
+        {
+            path:"/instractor",
+            element:<Instractor></Instractor>
 
         },
         {
