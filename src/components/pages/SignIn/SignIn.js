@@ -1,15 +1,21 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { useLocation, useNavigate } from 'react-router-dom';
 import ContextProvider, { AuthContext } from '../../../context/ContextProvider/ContextProvider';
 const provider =new GoogleAuthProvider();
 const gitHubProvider=new GithubAuthProvider();
 
 const SignIn = () => {
-    const {sigInWithGoogle,signInEmailAndPassword,signInWithGithub}=useContext(AuthContext);
+    const {sigInWithGoogle,signInEmailAndPassword,signInWithGithub,setLoading}=useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [error, setError] = useState('');
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleSignIn=(event)=>{
         event.preventDefault();
@@ -22,8 +28,16 @@ const SignIn = () => {
             const user=result.user;
             console.log(user);
             form.reset();
+            setError('');
+            navigate(from, {replace: true});
          })
-         .catch(error=>console.log("error",error))
+         .catch(error=>{
+            console.error(error)
+            setError(error.message);
+        })
+        .finally(() => {
+            setLoading(false);
+        })
     
     }
     const handleGoogleSignIn=()=>{
@@ -31,8 +45,16 @@ const SignIn = () => {
         .then(result=>{
             const user=result.user;
             console.log(user);
+            navigate(from, {replace: true});
         })
-        .catch(error=>console.error("Error",error))    
+        .catch(error=>{
+            console.error("Error",error)
+            setError(error.message);
+        }
+        )
+        .finally(() => {
+            setLoading(false);
+        })    
     }
    
     const handleGithubLogIn=()=>{
@@ -40,8 +62,16 @@ const SignIn = () => {
         .then(result=>{
             const user=result.user;
             console.log(user);
+            navigate(from, {replace: true});
         })
-        .then(error=>console.error('error',error))
+        .then(error=>{
+            console.error('error',error)
+            setError(error.message);
+        }
+            )
+        .finally(() => {
+            setLoading(false);
+        })
 
     }
 
@@ -80,22 +110,11 @@ const SignIn = () => {
                
                
             </div>
-
+            <Form.Text className="text-danger">
+                {error}
+            </Form.Text>
         </Form>
-          {/* <p className='fs-2 fw-bolder'>Sign In With </p>
-            <div className='text-center d-flex'>
-            
-                <Button variant="outline-dark" className='px-5 mb-3 w-20 me-5'>
-                   Google<FaGoogle className='ms-1'></FaGoogle>
-                </Button>
-            
-             
-               <Button variant="outline-dark" className='mb-3 px-5 btn btn-lg'>
-                   Github<FaGithub className='ms-1'></FaGithub>
-                </Button>
-               
-               
-            </div> */}
+         
             </>
 
     );

@@ -6,10 +6,13 @@ import Courses from "../components/Courses/Courses";
 import Home from "../components/Home/Home";
 import MainHome from "../components/Home/MainHome";
 import ContentSummary from "../components/pages/ContentSummary/ContentSummary";
+import TermsAndConditon from "../components/pages/Other/TermsAndConditon";
+
 import SignIn from "../components/pages/SignIn/SignIn";
 import SingUp from "../components/pages/SignUp/SingUp";
 import Main from "../layout/Main";
 import SubMain from "../layout/SubMain";
+import PrivetRoute from "./PrivetRoute";
 
 
  export const routes=createBrowserRouter(
@@ -29,7 +32,7 @@ import SubMain from "../layout/SubMain";
         },
         {
          path:"/cours/:id",
-         element:<Cours></Cours>,
+         element:<PrivetRoute><Cours></Cours></PrivetRoute>,
          loader:({params})=>fetch(`http://localhost:5000/cours/${params.id}`)
         },
         {
@@ -47,8 +50,7 @@ import SubMain from "../layout/SubMain";
             element:<SingUp></SingUp>
 
         }
-    
-    ]   
+      ]   
         
     },
     {
@@ -62,7 +64,12 @@ import SubMain from "../layout/SubMain";
         {
             path:'/about',
             element:<About></About>
-        }
+        },
+        {
+            path:"/terms",
+            element:<TermsAndConditon></TermsAndConditon>
+           }
+       
 
     ]
     }
