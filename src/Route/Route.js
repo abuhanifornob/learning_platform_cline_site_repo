@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import About from "../components/About/About";
+import Blog from "../components/Blog/Blog";
 import Category from "../components/Category/Category";
 import Cours from "../components/Courses/Cours";
 import Courses from "../components/Courses/Courses";
@@ -64,6 +65,11 @@ import PrivetRoute from "./PrivetRoute";
         {
             path:'/about',
             element:<About></About>
+        },
+        {
+            path:"/blog",
+            element:<Blog></Blog>
+
         },
         {
             path:"/terms",
