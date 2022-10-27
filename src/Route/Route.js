@@ -7,6 +7,7 @@ import Courses from "../components/Courses/Courses";
 import Home from "../components/Home/Home";
 import MainHome from "../components/Home/MainHome";
 import ContentSummary from "../components/pages/ContentSummary/ContentSummary";
+import FourOfFour from "../components/pages/Other/FourOfFour";
 import TermsAndConditon from "../components/pages/Other/TermsAndConditon";
 
 import SignIn from "../components/pages/SignIn/SignIn";
@@ -78,6 +79,10 @@ import PrivetRoute from "./PrivetRoute";
        
 
     ]
+    },
+    {
+   path:"/*",
+   element:<FourOfFour></FourOfFour>
     }
 
  ]);

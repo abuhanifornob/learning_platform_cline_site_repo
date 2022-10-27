@@ -13,10 +13,10 @@ const ContentSummary = ({ co }) => {
            <img className='img-fluid w-100' src={image_url}></img>
            </div>
             
-            <h3>{title}</h3>
+            <h3 className='text-center my-5'>{title}</h3>
             <p>{
                 details.length > 250 ?
-                    <>{details.slice(0, 250) + '...'} <Link to={`/cours/${_id}`}>Read More for this Courses Details</Link> </>
+                    <>{details.slice(0, 250) + '...'} <Link to={`/cours/${_id}`}>Get premium access.</Link> </>
                     :
                     details
                 //  {`/news/${_id}`}

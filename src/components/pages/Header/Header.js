@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { Button, Image, Tooltip } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
@@ -13,12 +14,18 @@ import { AuthContext } from '../../../context/ContextProvider/ContextProvider';
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user)
-
+  const[mode,setMode]=useState(true);
   const handleLogOut = () => {
     logOut()
       .then(() => { })
       .then(error => console.error("error", error))
+  }
+  const handleLight=()=>{
+    setMode(false)
+
+  }
+ const handleDark=()=>{
+       setMode(true)
   }
 
   return (
@@ -29,7 +36,7 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home"><Link to="/home" className='text-decoration-none text-dark fs-5'>Home</Link></Nav.Link>
-            <Nav.Link href="#home"><Link to="/home" className='text-decoration-none text-dark fs-5'>About</Link></Nav.Link>
+            <Nav.Link href="#home"><Link to="/about" className='text-decoration-none text-dark fs-5'>About</Link></Nav.Link>
             <Nav.Link href="#home"><Link to="/courses" className='text-decoration-none text-dark fs-5'>Courses</Link></Nav.Link>
           
             <Nav.Link href="#home"><Link to="/instractor" className='text-decoration-none text-dark fs-5'>Instrctor</Link></Nav.Link>
@@ -76,6 +83,13 @@ const Header = () => {
               }
 
             </Nav.Link>
+            
+              { mode? <Button onClick={handleLight} variant="light" className='rounded-pill p-0 mt-3' style={{width:50, height:50}}>Dark</Button>:
+              <Button onClick={handleDark} variant="dark" className='rounded-pill p-0 mt-3' style={{width:50, height:50}}>Light</Button>
+              }
+              
+              
+       
 
           </Nav>
         </Navbar.Collapse>
